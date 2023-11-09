@@ -25,7 +25,7 @@
         android:layout_marginTop="108dp"
         android:fontFamily="@font/baloo_tamma"
         android:gravity="center_horizontal|top"
-        android:text="@string/merra"
+        android:text="MERRA"
         android:textAppearance="@style/merra"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,26 +34,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="320dp"
         android:layout_height="2dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="12dp"
         android:background="#0C0C0C"
-        app:layout_constraintTop_toBottomOf="@+id/merra"
-        tools:layout_editor_absoluteX="52dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Malaysiana Emergency Response and Rescue App"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="206dp" />
+        android:layout_marginTop="17dp"
+        android:text="Malaysian Emergency Response and Rescue App"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merra" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="116dp"
         android:background="@drawable/roundedbutton"
         android:text="SOS"
         android:textAlignment="center"
@@ -62,7 +66,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:onClick="onNextButtonClick" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
