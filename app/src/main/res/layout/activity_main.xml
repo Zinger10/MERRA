@@ -55,7 +55,7 @@
         android:layout_height="200dp"
         android:layout_marginTop="148dp"
         android:background="@drawable/roundedbutton"
-        android:text="SOSa"
+        android:text="SOS"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="60sp"
