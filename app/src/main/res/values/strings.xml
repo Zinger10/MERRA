@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">MERRA</string>
     <string name="merra">
-        MERRA
+
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 
 </resources>
